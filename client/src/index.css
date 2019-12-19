@@ -1,19 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f2f2f2;
+  background-color: #212121;
+  padding-top:110px;
+}
+
+a{
+  text-decoration: none;
+  color:#fff;
 }
 
 .movie-card {
-  background-color: #fff;
-  border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  background-color: #263238;
+  border: 1px solid #0008;
   padding: 1rem;
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
+  max-width:1000px;
+  color:#fff;
 }
 
 .movie-director {
@@ -22,18 +32,21 @@ body {
 }
 
 .saved-list {
-  background-color: #fff;
-  border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  background-color: #263238;
+  color:#fff;
+  border: 1px solid #0008;
+  /* box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24); */
   padding: 1rem;
   cursor: pointer;
-  position: relative;
-  margin: 1rem auto;
-  width: 75%;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index:1000;
 }
 
 .saved-list h3 {
@@ -55,23 +68,167 @@ body {
 }
 .save-button {
   position: absolute;
-  top: 25px;
-  right: 25px;
-  border: 1px solid grey;
+  top: 75px;
+  right: 255px;
+  width:100px;
+  text-align:center;
   padding: 5px 10px;
-  background-color: lightseagreen;
+  border: 1px solid #000;
+  background-color: #212121;
+  color:#fff;
+  cursor: pointer;
 }
 .save-button:hover {
-  background-color: green;
+  background-color: #90A4AE;
+  color: white;
+}
+
+.update-button {
+  position: absolute;
+  top: 115px;
+  right: 255px;
+  width:100px;
+  text-align:center;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  background-color: #212121;
+  color:#fff;
+  cursor: pointer;
+}
+
+.update-button:hover {
+  background-color: #90A4AE;
+  color: white;
+}
+
+.delete-button {
+  position: absolute;
+  top: 155px;
+  right: 255px;
+  width:100px;
+  text-align:center;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  background-color: #212121;
+  color:#fff;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #90A4AE;
   color: white;
 }
 
 .home-button {
   padding: 5px 10px;
-  background-color: lightskyblue;
+  border: 1px solid #000a;
+  background-color: #455A64;
+  color:#fff;
 }
 
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+.add-movie{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  background-color: #455A64;
+  border: 1px solid #0005;
+  height:50px;
+  width:400px;
+  margin:0 auto;
+  cursor: pointer;
+}
+
+.add-form{
+  background-color: #263238;
+  border: 1px solid #0008;
+  flex-wrap: wrap;
+  padding:20px;
+  margin:0 auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align:left;
+  width:800px;
+}
+
+.add-form input{
+  width:100%;
+  margin:5px 0;
+  height:40px;
+  background-color: #546E7A;
+  border:none;
+  padding:5px 10px;
+  color:#fff;
+  font-size:1.4rem;
+}
+
+.add-form h2{
+  text-align:center;
+  color:#fff;
+}
+
+.add-form label{
+  color:#fff;
+  font-weight:bold;
+}
+
+.add-form button{
+  text-align:center;
+  margin:10px 0;
+  padding:10px;
+  font-size:1.4rem;
+  background-color: #78909C;
+  border: 1px solid #0008;
+  color:#fff;
+  font-weight:bold;
+}
+
+.update-form{
+  background-color: #263238;
+  border: 1px solid #0008;
+  flex-wrap: wrap;
+  padding:20px;
+  margin:0 auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align:left;
+  width:800px;
+}
+
+.update-form input{
+  width:100%;
+  margin:5px 0;
+  height:40px;
+  background-color: #546E7A;
+  border:none;
+  padding:5px 10px;
+  color:#fff;
+  font-size:1.4rem;
+}
+
+.update-form h2{
+  text-align:center;
+  color:#fff;
+}
+
+.update-form label{
+  color:#fff;
+  font-weight:bold;
+}
+
+.update-form button{
+  text-align:center;
+  margin:10px 0;
+  padding:10px;
+  font-size:1.4rem;
+  background-color: #78909C;
+  border: 1px solid #0008;
+  color:#fff;
+  font-weight:bold;
 }
